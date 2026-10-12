@@ -1,0 +1,103 @@
+[
+  {
+    "query": "mano esse index.html da papelaria ta pronto mas minha mãe vai ter q trocar o preço das impressões toda semana e ela não sabe mexer em código. tem como eu botar um jeito dela editar sem abrir o arquivo?",
+    "should_trigger": true,
+    "note": "caso central: não usa as palavras admin/painel, mas é exatamente CREATE"
+  },
+  {
+    "query": "Preciso de um painel oculto neste HTML para editar título, imagem e preço.",
+    "should_trigger": true,
+    "note": "pedido canônico, modo FAST"
+  },
+  {
+    "query": "cria um admin.html pra esse projeto aqui, quero controlar os cards de produto (criar, apagar, reordenar) e também o texto do banner de cima",
+    "should_trigger": true,
+    "note": "separate-admin + cards + textos"
+  },
+  {
+    "query": "tenho um painel funcionando com localStorage mas agora preciso que as config apareçam em todos os dispositivos. migra pra Firestore sem perder o que já está salvo",
+    "should_trigger": true,
+    "note": "MIGRATE com recuperação de schema"
+  },
+  {
+    "query": "analisa esse site e me diz qual estrutura de Admin combina melhor com ele. não implementa nada ainda, só quero entender as opções",
+    "should_trigger": true,
+    "note": "GUIDED + AUDIT, sem implementação"
+  },
+  {
+    "query": "aplica meu padrão de controle nessa página nova",
+    "should_trigger": true,
+    "note": "genérico, depende de references/profile.md"
+  },
+  {
+    "query": "audita esse Admin aqui e vê se ele está duplicando estado ou renderização. desconfio que o painel desenha a tela de um jeito e a página de outro",
+    "should_trigger": true,
+    "note": "AUDIT puro"
+  },
+  {
+    "query": "queria que o splash desse site tivesse duração configurável, e também poder ligar/desligar ele e trocar a imagem de fundo pelo painel",
+    "should_trigger": true,
+    "note": "Splash + efeitos + imagem"
+  },
+  {
+    "query": "preciso que um editor apareça por cima da própria página quando eu der triplo clique no logo, e que use Firestore com onSnapshot pra atualizar em tempo real",
+    "should_trigger": true,
+    "note": "decisões já fechadas: FAST, não deve entrevistar"
+  },
+
+  {
+    "query": "esse admin.html tá quebrando com Uncaught TypeError: Cannot read properties of null na linha 47, bem no getElementById('preco-input'). resolve pra mim",
+    "should_trigger": false,
+    "note": "quase-acerto: é admin, mas é debug de bug pontual, não construção de sistema de controle"
+  },
+  {
+    "query": "quero um formulário de contato no site que salve as mensagens no Firestore e me mande por email",
+    "should_trigger": false,
+    "note": "quase-acerto: Firestore + formulário, mas é feature de usuário final, não superfície administrativa"
+  },
+  {
+    "query": "como faço pra fechar esse modal quando o cara clica fora dele? tentei addEventListener no document mas fecha na hora que abre",
+    "should_trigger": false,
+    "note": "quase-acerto: overlay/modal, mas é comportamento de UI comum"
+  },
+  {
+    "query": "o painel admin do meu wordpress tá lento pra carregar os produtos do woocommerce, o que pode ser?",
+    "should_trigger": false,
+    "note": "quase-acerto: tem 'painel admin', mas é performance de plataforma de terceiro"
+  },
+  {
+    "query": "qual a diferença entre Firestore e Realtime Database? qual compensa mais pra um projeto pequeno com pouca escrita",
+    "should_trigger": false,
+    "note": "pergunta conceitual sobre tecnologia que a skill usa"
+  },
+  {
+    "query": "me explica como funciona o localStorage e qual o limite de tamanho dele nos navegadores",
+    "should_trigger": false,
+    "note": "pergunta conceitual"
+  },
+  {
+    "query": "tenho um JSON de config nesse projeto e queria validar ele com zod antes de dar deploy. monta o schema pra mim",
+    "should_trigger": false,
+    "note": "quase-acerto: JSON de config, mas é validação de build, não painel"
+  },
+  {
+    "query": "preciso de uma dashboard mostrando quantas vendas tiveram por mês, com um gráfico de barras",
+    "should_trigger": false,
+    "note": "quase-acerto: 'dashboard' soa administrativo, mas é visualização de dados (dataviz), não controle de configuração"
+  },
+  {
+    "query": "adiciona autenticação com Firebase Auth nesse app, login com google e email",
+    "should_trigger": false,
+    "note": "limítrofe documentado: só ativar se for parte de um sistema Page Control; isolado, é fluxo de auth comum"
+  },
+  {
+    "query": "deixa esse título editável inline, tipo contenteditable, pro usuário logado mudar o nome do perfil dele",
+    "should_trigger": false,
+    "note": "limítrofe: 'tornar editável' mas é edição de dado de usuário final, não configuração administrativa"
+  },
+  {
+    "query": "refatora esse arquivo de 800 linhas em módulos separados, tá tudo num script inline só",
+    "should_trigger": false,
+    "note": "quase-acerto: single-file, mas é refatoração estrutural sem controle configurável"
+  }
+]
